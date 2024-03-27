@@ -11,7 +11,7 @@ import {MdHelp, MdOutlineFavorite} from 'react-icons/md'
 
 
 //--------------------------------------------------------------------------------------------------------------------------------//
-//TOP NAV//
+                                                                    //TOP NAV//
 //--------------------------------------------------------------------------------------------------------------------------------//
 
 const TopNav = () => {
@@ -31,7 +31,7 @@ const TopNav = () => {
           </div>
           <h1 className="text-2xl sm:text-3xl lg:text-4xl px-2">
             Yum
-            <span>Eats</span>
+            <span className='font-bold'>Eats</span>
           </h1>
           <div className="hidden lg:flex items-center bg-gray-200 rounded-full p-1 text-[14px]">
             <p className="bg-orange-700 text-white rounded-full p-2 text-hold">
@@ -54,7 +54,10 @@ const TopNav = () => {
         </button>
         {/* ------------SIDENAV OVERLAY------------------- */}
         {sideNav ? (
-          <div className="bg-black bg-opacity-60 fixed w-full h-screen z-10 top-0 left-0">
+          <div className="bg-black bg-opacity-60 fixed w-full h-screen z-10 top-0 left-0"
+         //CLOSE TOGGLE FROM THE OVERLAY
+          onClick={() => setSideNav(!sideNav)}
+          >
             {" "}
           </div>
         ) : (
@@ -74,7 +77,7 @@ const TopNav = () => {
 
 
 
-            {/* //------------------------------MENU------------------------------------------ */}
+            {/* //------------------------------TOGGLE MENU------------------------------------------ */}
           <h2 className='text-2x1 p-4'>Yum<span className='text-orange-700 font-bold'> Eats</span></h2>
         <nav>
           <ul className="flex flex-col p-4 text-gray-900">
